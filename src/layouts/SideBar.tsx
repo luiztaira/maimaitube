@@ -163,7 +163,7 @@ const SideBar = () => {
           <LargeSideBarItem
             isActive={location.pathname === "/"} // Set active if URL matches
             IconOrImgUrl={Home}
-            title="Home"
+            title="ホーム"
             url="/"
           />
           <LargeSideBarItem
@@ -178,25 +178,25 @@ const SideBar = () => {
           <LargeSideBarItem
             isActive={location.pathname === "/library"}
             IconOrImgUrl={Library}
-            title="Library"
+            title="ライブラリ"
             url="/library"
           />
           <LargeSideBarItem
             isActive={location.pathname === "/history"}
             IconOrImgUrl={History}
-            title="History"
+            title="履歴"
             url="/history"
           />
           <LargeSideBarItem
             isActive={location.pathname === "/your-videos"}
             IconOrImgUrl={PlaySquare}
-            title="Your Videos"
+            title="私の動画"
             url="/your-videos"
           />
           <LargeSideBarItem
             isActive={location.pathname === "/playlist?list=WL"}
             IconOrImgUrl={Clock}
-            title="Watch Later"
+            title="後で見る"
             url="/playlist?list=WL"
           />
           {playlists.map((playlist) => (
@@ -224,6 +224,12 @@ const SideBar = () => {
         <hr />
         <LargeSideBarSection title="Explore">
           <LargeSideBarItem
+            IconOrImgUrl={Music2}
+            title="Music"
+            url="/music"
+            isActive={location.pathname === "/music"}
+          />
+          {/* <LargeSideBarItem
             IconOrImgUrl={Flame}
             title="Trending"
             url="/trending"
@@ -234,12 +240,6 @@ const SideBar = () => {
             title="Shopping"
             url="/shopping"
             isActive={location.pathname === "/shopping"}
-          />
-          <LargeSideBarItem
-            IconOrImgUrl={Music2}
-            title="Music"
-            url="/music"
-            isActive={location.pathname === "/music"}
           />
           <LargeSideBarItem
             IconOrImgUrl={Film}
@@ -276,7 +276,7 @@ const SideBar = () => {
             title="Podcasts"
             url="/podcasts"
             isActive={location.pathname === "/podcasts"}
-          />
+          /> */}
         </LargeSideBarSection>
       </aside>
     </>
