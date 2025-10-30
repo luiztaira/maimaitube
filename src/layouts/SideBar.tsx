@@ -26,7 +26,7 @@ import {
 import { Button, buttonStyles } from "../components/Button";
 import { twMerge } from "tailwind-merge";
 import { subscriptions, playlists } from "../data/sidebar";
-import { useSidebarContext } from "../contexts/SidebarContext";
+import { useSidebarContext } from "../contexts/SideBarContext";
 import { PageHeaderFirstSection } from "./PageHeader";
 
 const SmallSideBarItem = ({ Icon, title, url }: SmallSideBarItemProps) => {

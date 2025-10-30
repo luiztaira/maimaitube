@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Menu, Upload, Bell, User, Mic, Search, ArrowLeft } from "lucide-react";
 import LuLuTube from "../assets/images/LuLuTube.png";
 import { Button } from "../components/Button";
-import { useSidebarContext } from "../contexts/SidebarContext";
+import { useSidebarContext } from "../contexts/SideBarContext";
 
 export const PageHeader = () => {
   const [showFullWidthSearch, setShowFullWidthSearch] = useState(false);
