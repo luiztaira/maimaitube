@@ -11,17 +11,7 @@ import {
   PlaySquare,
   Clock,
   ListVideo,
-  Flame,
-  ShoppingBag,
   Music2,
-  Radio,
-  Newspaper,
-  Lightbulb,
-  Podcast,
-  Trophy,
-  Film,
-  Gamepad2,
-  Shirt,
 } from "lucide-react";
 import { Button, buttonStyles } from "../components/Button";
 import { twMerge } from "tailwind-merge";
@@ -74,7 +64,7 @@ const LargeSideBarSection = ({
           className="w-full flex items-center rounded-lg gap-4 p-3"
         >
           <ButtonIcon className="w-6 h-6" />
-          <div>{isExpanded ? "Show Less" : "Show More"}</div>
+          <div>{isExpanded ? "少なく表示する" : "もっと表示する"}</div>
         </Button>
       )}
     </div>
