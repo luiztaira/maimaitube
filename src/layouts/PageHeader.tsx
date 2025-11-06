@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Menu, Upload, Bell, User, Mic, Search, ArrowLeft } from "lucide-react";
 import LuLuTube from "../assets/images/LuLuTube.png";
+import MaimaiTube from "../assets/images/MaimaiTube.png";
 import { Button } from "../components/Button";
 import { useSidebarContext } from "../contexts/SideBarContext";
 
@@ -101,7 +102,7 @@ export const PageHeaderFirstSection = ({
       </Button>
       <button>
         <Link to="/">
-          <img src={LuLuTube} alt="Logo" className="h-10 w-auto" />
+          <img src={MaimaiTube} alt="Logo" className="h-10 w-auto" />
         </Link>
       </button>
     </div>
