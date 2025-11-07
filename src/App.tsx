@@ -6,12 +6,15 @@ import {
 } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import WatchPage from "./pages/WatchPage";
+import FallbackPage from "./pages/FallBackPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route index element={<HomePage />} />
       <Route path="/watch/:id" element={<WatchPage />} />
+      {/* Catch-all route for everything else */}
+      <Route path="*" element={<FallbackPage />} />
     </>
   )
 );
