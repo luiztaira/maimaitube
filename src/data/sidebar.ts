@@ -1,3 +1,5 @@
+import { getRandomImage } from "../utils/getRandomImage";
+
 type Subscription = {
   channelName: string;
   id: string | number;
@@ -8,8 +10,7 @@ export const subscriptions: Subscription[] = [
   {
     channelName: "Luiz Taira",
     id: 1,
-    imgUrl:
-      "https://yt3.googleusercontent.com/ytc/APkrFKb--NH6RwAGHYsD3KfxX-SAgWgIHrjR5E4Jb5SDSQ=s176-c-k-c0x00ffffff-no-rj",
+    imgUrl: getRandomImage(),
   },
 ];
 
