@@ -51,38 +51,59 @@ export function VideoGridItem({
       onMouseEnter={() => setIsVideoPlaying(true)}
       onMouseLeave={() => setIsVideoPlaying(false)}
     >
-      <a href={`/watch/${id}`} className="relative aspect-video">
-        <img
-          src={thumbnailUrl}
-          className={`block w-full h-full object-cover transition-[border-radius] duration-200 ${
-            isVideoPlaying ? "rounded-none" : "rounded-xl"
-          }`}
-        />
-        <div className="absolute bottom-1 right-1 bg-secondary-dark text-secondary text-sm px-0.5 rounded">
-          {formatDuration(duration)}
+      <a href={`/watch/${id}`} className="relative block">
+        <div className="relative aspect-video bg-black rounded-xl overflow-hidden">
+          {/* Thumbnail */}
+          <img
+            src={thumbnailUrl}
+            className={`absolute inset-0 w-full h-full object-cover transition-all duration-200 ${
+              isVideoPlaying ? "scale-110 rounded-none" : "rounded-xl"
+            }`}
+            alt={title}
+          />
+
+          {/* Duration badge */}
+          <div className="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-1.5 py-0.5 rounded">
+            {formatDuration(duration)}
+          </div>
+
+          {/* Video overlay */}
+          <video
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-200 ${
+              isVideoPlaying ? "opacity-100 delay-200" : "opacity-0"
+            }`}
+            ref={videoRef}
+            muted
+            playsInline
+            src={videoUrl}
+          />
         </div>
-        <video
-          className={`block h-full object-cover absolute inset-0 transition-opacity duration-200 ${
-            isVideoPlaying ? "opacity-100 delay-200" : "opacity-0"
-          }`}
-          ref={videoRef}
-          muted
-          playsInline
-          src={videoUrl}
-        />
       </a>
-      <div className="flex gap-2">
+
+      {/* Video info */}
+      <div className="flex gap-3">
         <a href={`/@${channel.id}`} className="flex-shrink-0">
-          <img className="w-12 h-12 rounded-full" src={channel.profileUrl} />
+          <img
+            className="w-10 h-10 rounded-full object-cover flex-shrink-0 border border-gray-200"
+            src={channel.profileUrl}
+            alt={channel.name}
+          />
         </a>
-        <div className="flex flex-col">
-          <a href={`/watch/${id}`} className="font-bold">
+        <div className="flex flex-col min-w-0 flex-1 gap-0.5">
+          <a
+            href={`/watch/${id}`}
+            className="font-semibold text-sm line-clamp-2 leading-tight hover:text-black/80"
+            title={title}
+          >
             {title}
           </a>
-          <a href={`/@${channel.id}`} className="text-secondary-text text-sm">
+          <a
+            href={`/@${channel.id}`}
+            className="text-gray-600 text-sm hover:text-black truncate"
+          >
             {channel.name}
           </a>
-          <div className="text-secondary-text text-sm">
+          <div className="text-gray-600 text-sm">
             {VIEW_FORMATTER.format(views)} Views • {formatTimeAgo(postedAt)}
           </div>
         </div>
