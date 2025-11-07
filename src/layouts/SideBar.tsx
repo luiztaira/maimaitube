@@ -12,6 +12,7 @@ import {
   Clock,
   ListVideo,
   Music2,
+  Album,
 } from "lucide-react";
 import { Button, buttonStyles } from "../components/Button";
 import { twMerge } from "tailwind-merge";
@@ -165,6 +166,12 @@ const SideBar = () => {
         </LargeSideBarSection>
         <hr />
         <LargeSideBarSection visibleItemCount={5}>
+          <LargeSideBarItem
+            IconOrImgUrl={Album}
+            title="アルバム"
+            url="/albums"
+            isActive={location.pathname === "/albums"}
+          />
           <LargeSideBarItem
             isActive={location.pathname === "/library"}
             IconOrImgUrl={Library}
