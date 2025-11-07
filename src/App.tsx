@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import WatchPage from "./pages/WatchPage";
-import FallbackPage from "./pages/FallBackPage";
+import FallbackPage from "./pages/FallbackPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
