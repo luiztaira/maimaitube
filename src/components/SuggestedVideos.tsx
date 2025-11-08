@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { videos } from "../data/home";
 import { formatDuration } from "../utils/formatDuration";
 import { formatTimeAgo } from "../utils/formatTimeAgo";
@@ -24,9 +25,9 @@ export const SuggestedVideos = ({
       <h3 className="font-bold text-lg mb-4">Suggested Videos</h3>
 
       {suggestedVideos.map((video) => (
-        <a
+        <Link
           key={video.id}
-          href={`/watch/${video.id}`}
+          to={`/watch/${video.id}`}
           className="flex gap-3 hover:bg-gray-50 p-2 rounded-lg transition-colors"
         >
           <div className="relative flex-shrink-0">
@@ -50,7 +51,7 @@ export const SuggestedVideos = ({
               {formatTimeAgo(video.postedAt)}
             </div>
           </div>
-        </a>
+        </Link>
       ))}
     </div>
   );

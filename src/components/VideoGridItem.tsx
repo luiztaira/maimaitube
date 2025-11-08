@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom"; // ← Add this import
 import { formatDuration } from "../utils/formatDuration";
 import { formatTimeAgo } from "../utils/formatTimeAgo";
 
@@ -51,7 +52,7 @@ export function VideoGridItem({
       onMouseEnter={() => setIsVideoPlaying(true)}
       onMouseLeave={() => setIsVideoPlaying(false)}
     >
-      <a href={`/watch/${id}`} className="relative block">
+      <Link to={`/watch/${id}`} className="relative block">
         <div className="relative aspect-video bg-black rounded-xl overflow-hidden">
           {/* Thumbnail */}
           <img
@@ -78,31 +79,31 @@ export function VideoGridItem({
             src={videoUrl}
           />
         </div>
-      </a>
+      </Link>
 
       {/* Video info */}
       <div className="flex gap-3">
-        <a href={`/@${channel.id}`} className="flex-shrink-0">
+        <Link to={`/@${channel.id}`} className="flex-shrink-0">
           <img
             className="w-10 h-10 rounded-full object-cover flex-shrink-0 border border-gray-200"
             src={channel.profileUrl}
             alt={channel.name}
           />
-        </a>
+        </Link>
         <div className="flex flex-col min-w-0 flex-1 gap-0.5">
-          <a
-            href={`/watch/${id}`}
+          <Link
+            to={`/watch/${id}`}
             className="font-semibold text-sm line-clamp-2 leading-tight hover:text-black/80"
             title={title}
           >
             {title}
-          </a>
-          <a
-            href={`/@${channel.id}`}
+          </Link>
+          <Link
+            to={`/@${channel.id}`}
             className="text-gray-600 text-sm hover:text-black truncate"
           >
             {channel.name}
-          </a>
+          </Link>
           <div className="text-gray-600 text-sm">
             {VIEW_FORMATTER.format(views)} Views • {formatTimeAgo(postedAt)}
           </div>
