@@ -20,7 +20,7 @@ export const videos = [
   },
   {
     id: "2",
-    title: "Brave Heart (2)",
+    title: "Brave Heart",
     channel: {
       name: "LuLuTube",
       id: "LuLuTube",
@@ -28,10 +28,10 @@ export const videos = [
     },
     views: 1,
     postedAt: new Date("2025-11-07"),
-    duration: 10,
+    duration: 8,
     thumbnailUrl: getRandomImage(),
-    videoUrl: "https://youtube.com/shorts/4d9clx_Uxwk?feature=share",
-    description: "SHOW ME YOUR BRAVE HEART!!",
+    videoUrl: "https://youtube.com/shorts/9SimHvO_15M?feature=share",
+    description: "CHAMA NENEM!!",
   },
   {
     id: "3",
@@ -62,5 +62,35 @@ export const videos = [
     thumbnailUrl: getRandomImage(),
     videoUrl: "https://youtube.com/shorts/bP23o5lCrz0?feature=share",
     description: "jkjkjkjkjkkjkjkkkk",
+  },
+  {
+    id: "5",
+    title: "Brave Heart (2)",
+    channel: {
+      name: "LuLuTube",
+      id: "LuLuTube",
+      profileUrl: getRandomImage(),
+    },
+    views: 1,
+    postedAt: new Date("2025-11-07"),
+    duration: 10,
+    thumbnailUrl: getRandomImage(),
+    videoUrl: "https://youtube.com/shorts/4d9clx_Uxwk?feature=share",
+    description: "SHOW ME YOUR BRAVE HEART!!",
+  },
+  {
+    id: "6",
+    title: "Manyanya",
+    channel: {
+      name: "LuLuTube",
+      id: "LuLuTube",
+      profileUrl: getRandomImage(),
+    },
+    views: 1,
+    postedAt: new Date("2025-11-07"),
+    duration: 6,
+    thumbnailUrl: getRandomImage(),
+    videoUrl: "https://youtube.com/shorts/uNRo_yUCplg?feature=share",
+    description: "台湾ミルクティーLサイズ",
   },
 ];
