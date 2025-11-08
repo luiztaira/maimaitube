@@ -1,6 +1,6 @@
 import {
   Route,
-  createBrowserRouter,
+  createHashRouter,
   createRoutesFromElements,
   RouterProvider,
 } from "react-router-dom";
@@ -8,7 +8,7 @@ import HomePage from "./pages/HomePage";
 import WatchPage from "./pages/WatchPage";
 import FallbackPage from "./pages/FallbackPage";
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   createRoutesFromElements(
     <>
       <Route index element={<HomePage />} />
