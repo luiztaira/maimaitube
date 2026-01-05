@@ -5,7 +5,37 @@ export const categories = ["Maimai", "音楽", "日常"];
 export const videos = [
   {
     id: "1",
-    title: "Happy birthday (1 take only)",
+    title: "25 21",
+    channel: {
+      name: "LuLuTube",
+      id: "LuLuTube",
+      profileUrl: getRandomImage(),
+    },
+    views: 20201108,
+    postedAt: new Date("2026-01-05"),
+    duration: 11,
+    thumbnailUrl: getRandomImage(),
+    videoUrl: "https://youtube.com/shorts/oAR_xAs4LJg?feature=share",
+    description: "Mai Hee Do",
+  },
+  {
+    id: "2",
+    title: "Those eyes (one take)",
+    channel: {
+      name: "LuLuTube",
+      id: "LuLuTube",
+      profileUrl: getRandomImage(),
+    },
+    views: 1,
+    postedAt: new Date("2026-01-05"),
+    duration: 239,
+    thumbnailUrl: getRandomImage(),
+    videoUrl: "https://youtu.be/TZ3yDCGkBK0",
+    description: `今回はちょっとミス多いかも。それでも想いは伝わっているかな。Just one take. Otherwise 近所迷惑で部屋から追い出される`,
+  },
+  {
+    id: "3",
+    title: "Happy birthday (1 take)",
     channel: {
       name: "LuLuTube",
       id: "LuLuTube",
@@ -20,7 +50,7 @@ export const videos = [
       "大事な人に誕生日おめでとう！Just one take. Otherwise 近所迷惑で部屋から追い出される",
   },
   {
-    id: "2",
+    id: "4",
     title: "Mai solo",
     channel: {
       name: "LuLuTube",
@@ -35,7 +65,7 @@ export const videos = [
     description: "前略お母、パーフェクトな女だ",
   },
   {
-    id: "3",
+    id: "5",
     title: "Mai solo (2)",
     channel: {
       name: "LuLuTube",
@@ -50,7 +80,7 @@ export const videos = [
     description: "Go get them girl!",
   },
   {
-    id: "4",
+    id: "6",
     title: "Can't help falling in love (1 take only)",
     channel: {
       name: "LuLuTube",
@@ -65,7 +95,7 @@ export const videos = [
     description: "Just one take. Otherwise 近所迷惑で部屋から追い出される",
   },
   {
-    id: "5",
+    id: "7",
     title: "Brave Heart",
     channel: {
       name: "LuLuTube",
@@ -80,7 +110,7 @@ export const videos = [
     description: "CHAMA NENEM!!",
   },
   {
-    id: "6",
+    id: "8",
     title: "Mareyo",
     channel: {
       name: "LuLuTube",
@@ -95,7 +125,7 @@ export const videos = [
     description: "マレヨ！",
   },
   {
-    id: "7",
+    id: "9",
     title: "Sniff sniff",
     channel: {
       name: "LuLuTube",
@@ -110,7 +140,7 @@ export const videos = [
     description: "jkjkjkjkjkkjkjkkkk",
   },
   {
-    id: "8",
+    id: "10",
     title: "Brave Heart (2)",
     channel: {
       name: "LuLuTube",
@@ -125,7 +155,7 @@ export const videos = [
     description: "SHOW ME YOUR BRAVE HEART!!",
   },
   {
-    id: "9",
+    id: "11",
     title: "Manyanya",
     channel: {
       name: "LuLuTube",
